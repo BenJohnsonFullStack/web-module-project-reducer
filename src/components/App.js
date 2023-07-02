@@ -18,6 +18,10 @@ function App() {
 
   const storeMemory = () => dispatch(setMemory(state.total));
 
+
+
+  const resetMemory = () => dispatch(clearMemory(initialState.memory));
+
   return (
     <div className="App">
       <nav className="navbar navbar-dark bg-dark">
@@ -37,7 +41,7 @@ function App() {
             <div className="row">
               <CalcButton value={"M+"} onClick={storeMemory}/>
               <CalcButton value={"MR"}/>
-              <CalcButton value={"MC"}/>
+              <CalcButton value={"MC"} onClick={resetMemory}/>
             </div>
 
             <div className="row">
